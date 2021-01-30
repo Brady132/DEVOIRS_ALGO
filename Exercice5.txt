@@ -1,0 +1,15 @@
+Algorithme Perso
+Variable sx: Caractère, age: Entier
+Début
+    Ecrire ("Entrez le sexe (M/F):");
+        Lire sx;
+    Ecrire ("Entrez l’âge:");
+        Lire age;
+        C1 ← sx = "M" et age > 20;
+        C2 ← sx = "F" et (age > 18 et age < 35);
+    Si C1 ou C2 Alors
+        Ecrire ("Imposable");
+    Sinon
+        Ecrire ("Non Imposable");
+    FinSi
+Fin

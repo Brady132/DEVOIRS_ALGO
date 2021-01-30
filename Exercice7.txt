@@ -1,0 +1,50 @@
+Algorithme Condition
+Variables age, pm, acc, ass: Entier, sit: Caractère
+Début
+    Ecrire ("Entrez l’âge:");
+        Lire (age);
+    Ecrire ("Entrez le nombre d'années de permis:");
+        Lire (pm);
+    Ecrire ("Entrez le nombre d'accidents:");
+        Lire (acc);
+    Ecrire ("Entrez le nombre d'années d'assurance:");
+        Lire (ass);
+    C1 ← age >= 25;
+    C2 ← pm >= 2;
+    C3 ← ass > 1;
+    Si Non(C1) et Non(C2) Alors
+    Si acc = 0 Alors
+        sit ← "Rouge";
+    Sinon Alors
+        sit ← "Refusé";
+    FinSi
+    Sinon si ((Non(C1) et C2) ou (C1 et Non(C2)) Alors
+    Si acc = 0 Alors
+        sit ← "Orange" ;
+    Sinon Si acc = 1 Alors
+        sit ← "Rouge" ;
+    Sinon
+        sit ← "Refusé" ;
+    FinSi
+    Sinon
+        Si acc = 0 Alors
+            sit ← "Vert" ;
+        Sinon Si acc = 1 Alors
+            sit ← "Orange" ;
+        Sinon Si acc = 2 Alors
+            sit ← "Rouge" ;
+        Sinon
+            sit ← "Refusé" ;
+        FinSi
+    FinSi
+    Si C3 Alors
+        Si sit = "Rouge" Alors
+            sit = "Orange" ;
+        Sinon Si sit = "Orange" Alors
+            sit = "Orange" ;
+        Sinon Si sit = "Vert" Alors
+            sit = "Bleu" ;
+        FinSi
+    FinSi
+    Ecrire ("Votre situation:", sit);
+Fin

@@ -1,0 +1,9 @@
+Tableau T() en Numérique
+Variables i, N: Numériques
+Debut
+    Pour i ← 0 à (N-1)/2
+    Temp ← T(i)
+    T(i) ← T(N-1-i)
+    T(N-1-i) ← Temp
+    i suivant
+Fin
